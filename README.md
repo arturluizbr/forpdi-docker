@@ -1,21 +1,26 @@
 # ForPDI
 
-[![](https://images.microbadger.com/badges/image/arturluizbr/forpdi.svg)](http://microbadger.com/images/arturluizbr/forpdi)
+![Docker Stars](https://img.shields.io/docker/stars/arturluizbr/forpdi.svg?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/arturluizbr/forpdi.svg?style=flat-square)
 
+![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/arturluizbr/forpdi.svg?style=flat-square)
+![MicroBadger Layers](https://img.shields.io/microbadger/layers/arturluizbr/forpdi.svg?style=flat-square)
 
+![Docker Automated build](https://img.shields.io/docker/automated/arturluizbr/forpdi.svg?style=flat-square)
+![Docker Build Status](https://img.shields.io/docker/build/arturluizbr/forpdi.svg?style=flat-square)
 
 O **ForPDI** é a plataforma aberta para gestão e acompanhamento do Plano de Desenvolvimento Institucional - PDI de universidades federais e outras instituições públicas. O ForPDI surgiu da necessidade de uma ferramenta de acompanhamento do PDI em tempo real, de forma colaborativa, eficiente, rápida e segura.
 
 ## Compose
 Para iniciar o serviço rapidamente pelo Docker Compose, utilize o seguinte arquivo:
-```yaml
+
+```
 version: "3.3"
 services:
   forpdi:
     image: arturluizbr/forpdi
     environment:
     - DB_HOST=mysql
-    - DB_PORT=3306
     - DB_NAME=forpdi
     - DB_USERNAME=forpdi
     - DB_PASSWORD=forpdi
@@ -35,14 +40,12 @@ services:
 
 ## Configurações
 
-Segue as configurações disponíveis:
-
 ### Implementadas
-- DB_HOST: Configura o Host do Banco Mysql. Valor padrão: mysql
-- DB_PORT: X. Valor padrão: 3306
-- DB_NAME: X. Valor padrão: forpdi
-- DB_USERNAME: X. Valor padrão: forpdi
-- DB_PASSWORD: X. Valor padrão: forpdi
+- DB_HOST: Host do Banco MySQL. *(Padrão: mysql)*
+- DB_PORT: Porta do Banco MySQL. *(Padrão: 3306)*
+- DB_NAME: Nome da base no Banco MySQL. *(Padrão: forpdi)*
+- DB_USERNAME: Nome de usuário no Banco MySQL. *(Padrão: forpdi)*
+- DB_PASSWORD: Senha do usuário no Banco MySQL. *(Padrão: forpdi)*
 
 ### Não Implementadas
 - MAIL_SMTP_FROM_NAME: X. Valor padrão: ForPDI
