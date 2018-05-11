@@ -1,8 +1,8 @@
 # ForPDI
 
 [![](https://images.microbadger.com/badges/image/arturluizbr/forpdi.svg)](https://microbadger.com/images/arturluizbr/forpdi "Get your own image badge on microbadger.com")
-
 [![](https://images.microbadger.com/badges/version/arturluizbr/forpdi.svg)](https://microbadger.com/images/arturluizbr/forpdi "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/arturluizbr/forpdi.svg)](https://microbadger.com/images/arturluizbr/forpdi "Get your own commit badge on microbadger.com")
 
 O **ForPDI** é a plataforma aberta para gestão e acompanhamento do Plano de Desenvolvimento Institucional - PDI de universidades federais e outras instituições públicas. O ForPDI surgiu da necessidade de uma ferramenta de acompanhamento do PDI em tempo real, de forma colaborativa, eficiente, rápida e segura.
 
