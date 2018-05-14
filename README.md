@@ -10,17 +10,20 @@ O **ForPDI** é a plataforma aberta para gestão e acompanhamento do Plano de De
 Para iniciar o serviço rapidamente pelo Docker Compose, utilize o seguinte arquivo:
 
 ```
-version: "3.3"
+version: "3.6"
 services:
   forpdi:
-    image: arturluizbr/forpdi
+    build: .
     environment:
     - DB_HOST=mysql
+    - DB_PORT=3306
     - DB_NAME=forpdi
     - DB_USERNAME=forpdi
     - DB_PASSWORD=forpdi
     ports:
-    - 8080:8080
+    - 8181:8080
+    depends_on:
+    - mysql
   mysql:
     image: mysql
     environment:
@@ -29,7 +32,9 @@ services:
     - MYSQL_USER=forpdi
     - MYSQL_PASSWORD=forpdi
     volumes:
-    - ./mysqldata:/var/lib/mysql
+    - mysqldata:/var/lib/mysql
+volumes:
+  mysqldata:
 ```
 
 
