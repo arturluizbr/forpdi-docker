@@ -1,6 +1,8 @@
 FROM alpine:latest AS CLONE_CODE
+ARG FORPDI_REPO_URL=https://github.com/forpdi/forpdi.git
+ARG FORPDI_REPO_BRANCH=master
 RUN apk add --update-cache --no-cache git
-RUN git clone https://github.com/forpdi/forpdi.git /forpdi
+RUN git clone --depth 1 $FORPDI_REPO_URL /forpdi -b $FORPDI_REPO_BRANCH
 
 FROM node:6-alpine AS BUILD_FRONTEND
 COPY --from=CLONE_CODE /forpdi /forpdi
