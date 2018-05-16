@@ -8,3 +8,4 @@ mysqldata/.mobi)
 *.iml
 out
 gen
+docker-compose.yml
