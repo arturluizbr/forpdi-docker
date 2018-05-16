@@ -1,6 +1,10 @@
 FROM alpine:latest AS CLONE_CODE
-ARG FORPDI_REPO_URL=https://github.com/forpdi/forpdi.git
-ARG FORPDI_REPO_BRANCH=master
+# Utilizando fork próprio para aceitar configurações do servidor SMTP em tempo de execução
+# Já foi enviado um pull request para que essas alterações sejam integradas na versão oficial
+ARG FORPDI_REPO_URL=https://github.com/arturluizbr/forpdi.git
+ARG FORPDI_REPO_BRANCH=systemprop
+#ARG FORPDI_REPO_URL=https://github.com/forpdi/forpdi.git
+#ARG FORPDI_REPO_BRANCH=master
 RUN apk add --update-cache --no-cache git
 RUN git clone --depth 1 $FORPDI_REPO_URL /forpdi -b $FORPDI_REPO_BRANCH
 
