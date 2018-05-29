@@ -33,7 +33,7 @@ services:
     depends_on:
     - mysql
   mysql:
-    image: mysql
+    image: mysql:5.7
     environment:
     - MYSQL_ROOT_PASSWORD=forpdi
     - MYSQL_DATABASE=forpdi
