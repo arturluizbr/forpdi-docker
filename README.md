@@ -45,6 +45,12 @@ volumes:
   mysqldata:
 ```
 
+## Acesso Inicial
+
+Para acesso inicial ao painel de administração, utilize as informações abaixo:
+
+- Email: admin@forpdi.org
+- Senha: 12345
 
 ## CONFIGURANDO SERVIÇO
 
