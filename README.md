@@ -15,19 +15,19 @@ services:
   forpdi:
     image: arturluizbr/forpdi
     environment:
-    - DB_HOST=mysql
-    - DB_PORT=3306
-    - DB_NAME=forpdi
-    - DB_USERNAME=forpdi
-    - DB_PASSWORD=forpdi
-    - MAIL_SMTP_FROM_NAME=ForPDI
-    - MAIL_SMTP_FROM_EMAIL=naoresponda@meusite.com.br
-    - MAIL_SMTP_URL=smtp-relay.gmail.com
-    - MAIL_SMTP_PORT=25
-    - MAIL_SMTP_USERNAME=
-    - MAIL_SMTP_PASSWORD=
-    - MAIL_SMTP_SSL=false
-    - MAIL_SMTP_TLS=false
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: forpdi
+      DB_USERNAME: forpdi
+      DB_PASSWORD: forpdi
+      MAIL_SMTP_FROM_NAME: ForPDI
+      MAIL_SMTP_FROM_EMAIL: naoresponda@meusite.com.br
+      MAIL_SMTP_URL: smtp-relay.gmail.com
+      MAIL_SMTP_PORT: 25
+      MAIL_SMTP_USERNAME: login
+      MAIL_SMTP_PASSWORD: senha
+      MAIL_SMTP_SSL: "false"
+      MAIL_SMTP_TLS: "false"
     ports:
     - 8181:8080
     depends_on:
@@ -35,10 +35,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-    - MYSQL_ROOT_PASSWORD=forpdi
-    - MYSQL_DATABASE=forpdi
-    - MYSQL_USER=forpdi
-    - MYSQL_PASSWORD=forpdi
+      MYSQL_ROOT_PASSWORD: forpdi
+      MYSQL_DATABASE: forpdi
+      MYSQL_USER: forpdi
+      MYSQL_PASSWORD: forpdi
     volumes:
     - mysqldata:/var/lib/mysql
 volumes:
